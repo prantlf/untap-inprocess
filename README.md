@@ -5,17 +5,29 @@
 ](https://www.npmjs.com/package/untap-inprocess)
 [![Test Coverage](https://codecov.io/gh/prantlf/untap-inprocess/branch/master/graph/badge.svg)](https://codecov.io/gh/prantlf/untap-inprocess)
 
+**Warning:** THIS PACKAGE HAS BEEN DEPRECATED.
+
+The `node:test` package in the latest releases of Node.js 18 includes a new reporter - `spec` - which is enabled by default and prints a readable report on the console very similar to the report printed by this package. You can just remove this package and enjoy the new default built-in reporter.
+
+This package continues working, but you will have to enable the TAP format on the command line explicitly, for example:
+
+    node --test-reporter tap test/index.js
+
+The original documentation continues below.
+
+----
+
 Formats the [TAP] output from a test suite using [`node:test`] to a readable text within the same Node.js process.
 
 Test harness [`node:test`] introduced to Node.js 18 can print only the [TAP] output. While being machine-parseable and to some extent human-readable, the test output can be inspected more efficiently, when it is formatted primarily for humans. This package ensures it by hooking in to the standard output stream and converting the test output to a more friendly format.
 
 * Single process. No need to pipe the test output through another tool.
-* Coloured. But not like a rainbow. Texts are clearly readable.
+* Decently coloured. Texts are still clearly readable.
 * Transparent. Console output from the test cases is preserved.
 * Fluent. Prints the real-time output during the test execution.
 * Short and fast. No dependencies.
 
-**Attention:** Supports only simple test suites, which consist of a flat list of test cases in a file. Not nested test suites.
+**Attention:** Supports only simple test suites, which consist of a flat list of test cases in a file. Not nested test suites in a single file.
 
 ## Synopsis
 
