@@ -1,6 +1,6 @@
 {
   "name": "untap-inprocess",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Formats the TAP output from a test suite using node:test to a readable text within the same Node.js process.",
   "author": "Ferdinand Prantl <prantlf@gmail.com>",
   "license": "MIT",
